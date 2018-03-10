@@ -19,7 +19,9 @@ public class StructuresAlgorithms {
         
         //DoublyLinkedList.main(args);
         
-        MyHashTable.main(args);
+        //MyHashTable.main(args);
+        
+        BinarySearchTree.main(args);
     }
     
 }

@@ -8,6 +8,6 @@
  *
  * @author willy
  */
-public class BFS {
+public class AVLTree {
     
 }

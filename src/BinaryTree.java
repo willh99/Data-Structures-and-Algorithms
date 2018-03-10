@@ -6,8 +6,36 @@
 
 /**
  *
- * @author willy
+ * @author will
  */
+
+class BTNode
+{
+    int key;
+    BTNode left, right;
+    
+    public BTNode(int item)
+    {
+        key = item;
+        left=right=null;
+    }
+}
+
 public class BinaryTree {
     
+    // Root of the tree
+    BTNode root;
+    
+    BinaryTree(int key){
+        root = new BTNode(key);
+    }
+    
+    BinaryTree(){
+        root = null;
+    }
+    
+    public static void main(String[] args)
+    {
+        BinaryTree tree = new BinaryTree();
+    }
 }
