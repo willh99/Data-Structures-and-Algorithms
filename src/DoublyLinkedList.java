@@ -167,7 +167,7 @@ public class DoublyLinkedList<E>{
     
     
     public static void main(String[] args){
-        DoublyLinkedList<Integer> dll = new DoublyLinkedList<Integer>();
+        DoublyLinkedList<Integer> dll = new DoublyLinkedList<>();
         dll.addFront(10);
         dll.addFront(34);
         dll.addBack(56);

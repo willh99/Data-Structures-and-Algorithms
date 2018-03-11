@@ -21,7 +21,9 @@ public class StructuresAlgorithms {
         
         //MyHashTable.main(args);
         
-        BinarySearchTree.main(args);
+        //BinarySearchTree.main(args);
+        
+        AVLTree.main(args);
     }
     
 }

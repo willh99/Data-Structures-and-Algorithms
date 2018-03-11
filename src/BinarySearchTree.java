@@ -139,8 +139,8 @@ public class BinarySearchTree {
     // Traverse the tree starting with left, then right, then root
     public void traversePostOrder(BTNode node){
         if(node!=null){
-            traversePreOrder(node.left);
-            traversePreOrder(node.right);
+            traversePostOrder(node.left);
+            traversePostOrder(node.right);
             System.out.print(" " + node.key);
         }
     }

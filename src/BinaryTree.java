@@ -8,19 +8,6 @@
  *
  * @author will
  */
-
-class BTNode
-{
-    int key;
-    BTNode left, right;
-    
-    public BTNode(int item)
-    {
-        key = item;
-        left=right=null;
-    }
-}
-
 public class BinaryTree {
     
     // Root of the tree
