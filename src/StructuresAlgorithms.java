@@ -23,7 +23,15 @@ public class StructuresAlgorithms {
         
         //BinarySearchTree.main(args);
         
-        AVLTree.main(args);
+        //AVLTree.main(args);
+        
+        //Heap.main(args);
+        
+        //playground.main(args);
+        
+        //DFS.main(args);
+        
+        Trie.main(args);
     }
     
 }
