@@ -99,7 +99,7 @@ public class LinkedList {
     }
     
     // Add new value to the list
-    public int add(int d)
+    public void add(int d)
     {
         node newNode = new node(d);
         newNode.next = head;
