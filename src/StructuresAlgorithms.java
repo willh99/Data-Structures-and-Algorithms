@@ -33,7 +33,9 @@ public class StructuresAlgorithms {
         
         //Trie.main(args);
         
-        MergeSort.main(args);
+        //MergeSort.main(args);
+        
+        BFS.main(args);
     }
     
 }

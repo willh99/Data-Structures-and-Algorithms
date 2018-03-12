@@ -10,14 +10,16 @@ import java.util.Queue;
 
 /**
  *
- * @author willy
+ * @author will
  */
 public class BFS {
     
     int a[][];
-    int rowNum[] = {-1, 0, 0, 1};
-    int colNum[] = {0, -1, 1, 0};
+    int rNum[] = {-1, 0, 0, 1};
+    int cNum[] = {0, -1, 1, 0};
     
+    
+    // inner class with current location and distance travelled
     private class queueNode{
         int x, y, count;
         
@@ -42,21 +44,58 @@ public class BFS {
     }
     
     // Note: Not yet finished
-    public void shortestPath()
+    public int shortestPath()
     {
         Queue<queueNode> nodes = new LinkedList<>();
         nodes.add(new queueNode(0,0,0));
         
         boolean visited[][] = new boolean[a.length][a[0].length];
         
-        while(!nodes.isEmpty()){
-            queueNode node = nodes.remove();
-            System.out.print(" " + node);
-            if(a[node.x][node.y] == 2) {
-                //pathExists = true;
-                break;
+        for(int i=0; i<a.length; i++){
+            for(int j=0; j<a[0].length; j++){
+                if(a[i][j] == 1)
+                    visited[i][j] = true;
             }
         }
-        System.out.println();
+        
+        while(!nodes.isEmpty()){
+            queueNode node = nodes.remove();
+            //System.out.print(" " + node);
+            
+            // Destination found
+            if(a[node.x][node.y] == 2) 
+                return node.count;
+            
+            // Move right one
+            if(isInBounds(node.x -1, node.y) && !visited[node.x-1][node.y]){
+                nodes.add(new queueNode(node.x-1, node.y, node.count+1));
+                visited[node.x-1][node.y] = true;
+            }
+            
+            // Move left one
+            if(isInBounds(node.x+1, node.y) && !visited[node.x+1][node.y]){
+                nodes.add(new queueNode(node.x+1, node.y, node.count+1));
+                visited[node.x+1][node.y] = true;
+            }
+            
+            // Move up one
+            if(isInBounds(node.x, node.y+1) && !visited[node.x][node.y+1]){
+                nodes.add(new queueNode(node.x, node.y+1, node.count+1));
+                visited[node.x][node.y+1] = true;
+            }
+            
+            // Move down one
+            if(isInBounds(node.x, node.y-1) && !visited[node.x][node.y-1]){
+                nodes.add(new queueNode(node.x, node.y-1, node.count+1));
+                visited[node.x][node.y-1] = true;
+            }
+        }
+        return -1;
+    }
+    
+    public static void main(String[] args)
+    {
+        BFS bfs = new BFS();
+        System.out.println(bfs.shortestPath());
     }
 }
