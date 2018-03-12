@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author willy
+ * @author will
  */
 public class Heap {
     private static final int c = 2;

@@ -6,7 +6,7 @@
 
 /**
  *
- * @author willy
+ * @author will
  */
 public class StructuresAlgorithms {
 
@@ -31,7 +31,9 @@ public class StructuresAlgorithms {
         
         //DFS.main(args);
         
-        Trie.main(args);
+        //Trie.main(args);
+        
+        MergeSort.main(args);
     }
     
 }

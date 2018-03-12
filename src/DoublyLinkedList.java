@@ -6,7 +6,7 @@
 
 /**
  *
- * @author willy
+ * @author will
  */
 public class DoublyLinkedList<E>{
     
