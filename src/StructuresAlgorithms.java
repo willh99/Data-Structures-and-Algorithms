@@ -35,7 +35,9 @@ public class StructuresAlgorithms {
         
         //MergeSort.main(args);
         
-        BFS.main(args);
+        //BFS.main(args);
+        
+        QuickSort.main(args);
     }
     
 }
